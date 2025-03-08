@@ -7,7 +7,8 @@ app.use(cors({
   //allow to use token
   allowedHeaders:['Content-Type', 'Authorization']
 }))
-app.use()
+//Set up server can put body
+app.use(express.json());
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
